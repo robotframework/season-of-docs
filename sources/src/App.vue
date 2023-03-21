@@ -30,7 +30,6 @@ This code was derived from https://github.com/robotframework/robotframework.gith
           v-bind:index="index"
           v-bind:key="index"
           class="pl-md-5 px-lg-2 p-sm-3 py-2 p-xs-1"/>
-	  <!-- <app-footer class="mt-0 py-5"/> -->
       </div>
     </div>
 </template>
@@ -206,15 +205,6 @@ export default {
           }
         },
         {
-          title: "Examples",
-          text_block: false,
-          tab_box: false,
-          feature_box: false,
-          data: {
-            //Different component, TODO: implement in reproducible component
-          }
-        },
-        {
           title: "Community",
           text_block: true,
           community_block: true,
@@ -245,32 +235,6 @@ export default {
             ]
           }
         },
-        {
-          title: "Training",
-          text_block: true,
-          community_block: true,
-          feature_box: false,
-          data: {
-            text: {
-              header: "Training",
-              text: 'Learn to use the tool in a workshop.'
-            },
-            items: [
-              {
-                title: 'community',
-                items: [
-                  {
-                    img: require("@/assets/img/sponsors/reaktor.jpg"),
-                    title: 'Robot Framework Browser -työpaja 🇫🇮',
-                    href: 'https://www.reaktor.com/training/robot-framework-browser-tyopaja/',
-                    text: "Puolipäivää kestävän kurssin aikana tutustutaan Robot Framework Browser -kirjaston ominaisuuksiin tiiviinä pakettina."
-                  }
-                ]
-              }
-            ]
-          }
-        },
-
         {
           title: "Keyword Docs",
           text_block: true,

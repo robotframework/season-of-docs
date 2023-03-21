@@ -20,7 +20,7 @@ This code was derived from https://github.com/robotframework/robotframework.gith
     <div>
       <section class="header">
         <div class="main-header-container w-50">
-          <h1 class="main-header">BROWSER LIBRARY </h1>
+          <h1 class="main-header">RBTFRMWRK MANUAL</h1>
         </div>
       </section>
     </div>
