@@ -37,92 +37,80 @@ This code was derived from https://github.com/robotframework/robotframework.gith
 import PageBlock from "@/components/PageBlock.vue";
 import marked from 'marked';
 
-const introText = marked(`
-Robot Framework deserves a browser automation solution that's designed for the 2020s.
+const introText = marked(`Robot Framework is a generic open source automation framework. It can be used for test automation and robotic process automation (RPA). Robot Framework is open and extensible – it can be integrated with virtually any other tool to create powerful and flexible automation solutions.  
 
-Browser library powered by <a href="https://playwright.dev/" target="_blank">Playwright</a> provides.
+Robot Framework is supported by the Robot Framework Foundation. Robot Framework Foundation is a non-profit consortium that fosters the growth of Robot Framework. It was founded by companies with a common interest to ensure the development of Robot Framework now and in the future.  
 
-🚀 Speed, ✅ reliability and 🔬 visibility.
+Robot Framework was initially developed at Nokia Networks around 2005. When Nokia decided to drop the development, the Foundation was established by a group of user companies who believed in the tool and wanted to continue the funding. Hence, in 2015 the Foundation took over the development and maintenance and the number of Foundation members has grown from the original 7 to 50+ as of today. Moreover, we have a vibrant community in Slack and hundreds of thousands of users all over the globe. 
 
-
-- Conscientious assertions.
-- Precise and fast browser window and tab control.
-- Chainable selector strategies.
-- Good shadow DOM support.
-- Simple descriptors for mobile devices.
-- Sending HTTP requests.
-
-
-See <a href="https://marketsquare.github.io/robotframework-browser/Browser.html" target="_blank">keyword documentation</a> and our <a href="https://github.com/MarketSquare/robotframework-browser#robotframework-browser" target="_blank">project on Github</a>.
-
-
-Join us for discussion and support at the <a href="https://forum.robotframework.org/c/libraries/browser" target="_blank">Robot Framework forum</a> and <a href="https://github.com/MarketSquare/robotframework-browser/issues" target="_blank">our GitHub issues</a>.
-
-Use. Benefit. Contribute. Lets make the best Browser library.`)
-
-const installText = marked(`
-<h1 id="dependencies">Dependencies</h1>
-
-Library installation requires both Python and NodeJs 
- 1. Install <a href="https://www.python.org/downloads/" target="_blank">Python™</a>
- 1. Install <a href="https://nodejs.org/en/download/" target="_blank">Node.js®</a>
-
-<h1 id="installation">Installation</h1>
-Library can be installed in two different modes, each library installation will also include browser binaries or browser binaries
-are managed outside of the library. Example for CI installation, where environment may contain multiple library installation, it is beneficial 
-to manage browser binaries outside of the library installation. This will option saves disk space in the environment, because each environment contains
-only one set of browsers binaries. When installation is done for test case development, it is better to install browser binaries with
-the library.<br><br>
-
-Install library with browser binaries.
- 1. Install Browser library from <a href="https://pypi.org/search/?q=robotframework-browser" target="_blank">PyPi</a> with pip:
-        > pip install robotframework-browser
- 1. Initialize the Browser library:
-        > rfbrowser init
-
-Install library when browsers binaries are installed separately to non standard location.
- 1. Install Browser library from <a href="https://pypi.org/search/?q=robotframework-browser" target="_blank">PyPi</a> with pip:
-        > pip install robotframework-browser
- 1. Initialize the Browser library and skip browsers installation:
-        > rfbrowser init --skip-browsers
- 1. Install browser binaries separately according <a href="https://playwright.dev/docs/browsers/#installing-browsers" target="_blank">Playwright</a> instructions. Example:
-        > PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers npx playwright install
- 1. Run test with PLAYWRIGHT_BROWSERS_PATH set. Example:
-        > PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers robot path/to/test
-
-<h1 id="update">Update</h1>
-The update procedure depends on which way the library is installed, with or without the browser binaries.<br><br>
-
-Update library with browser binaries.
- 1. Install Browser library from <a href="https://pypi.org/search/?q=robotframework-browser" target="_blank">PyPi</a> with pip:
-        > pip install --upgrade robotframework-browser
- 1. Clean old browser binaries and node dependencies:
-        > rfbrowser clean-node
- 1. Initialize the Browser library with new node dependencies:
-        > rfbrowser init
-
-Update library when browsers binaries are installed separately to non standard location.
- 1. Install Browser library from <a href="https://pypi.org/search/?q=robotframework-browser" target="_blank">PyPi</a> with pip:
-        > pip install --upgrade robotframework-browser
- 1. Clean node dependencies:
-        > rfbrowser clean-node
- 1. Initialize the Browser library with new node dependencies:
-        > rfbrowser init --skip-browsers
- 1. Install browser binaries separately according <a href="https://playwright.dev/docs/browsers/#installing-browsers" target="_blank">Playwright</a> instructions. Example:
-        > PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers npx playwright install
- 1. Run test with PLAYWRIGHT_BROWSERS_PATH set. Example:
-        > PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers robot path/to/test
-
-<h1 id="uninstall">Uninstall</h1>
-Uninstall procedure is same for both installation way, but if browser binaries are managed separately, user must delete browser binaries manually.<br><br>
-
- 1. Clean old browser binaries and node dependencies:
-        > rfbrowser clean-node
- 1. Uninstall with pip:
-        > pip uninstall robotframework-browser
- 1. If browser binaries are manages separately, user must delete binaries manually, example:
-        > rm -rf $HOME/pw-browsers
+Our [User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) is one of the main resources and during the past 12 months some 500 thousand people have visited that page. Unfortunately, the current User Guide is not up to par and we would need help to update it in order to better serve our community and the people who use our great tool.
 `)
+
+const ourProjectIssue = marked(`
+
+There are few issues with the current [User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html).  
+
+
+#### Content
+The content could be modernized. Some of the examples, although still correct, are from the very early days of the project.  
+
+#### Structure and writing style
+The structure is now a mix of technical guide (manual) and a quick start guide with examples. We have created a separate ["Docs" site](https://docs.robotframework.org/docs) for examples and more hands-on material and we would see fit to move the examples from the User Guide there, making the User Guide a more of a technical manual. Overall, we see that the User Guide structure should be revised and possibly re-organized and the document re-written at least partly.  
+
+#### Visuals
+The User Guide should be more visually appealing. The User Guide can be a bit off-putting for new users just learning about the tool and landing on the page. We could move it to the same platform as Docs ([Docusaurus](https://docusaurus.io/)) which would also help to make the visuals more appealing and the overall document more approachable.  
+
+#### Navigation and search
+The User Guide is currently a very long 1-page document with a side-navigation. It has no search function (beside Browser Text Search) and the fact that it's one page makes it hard to navigate/jump between chapters.
+
+#### Conclusion
+
+All of the above mentioned changes would help us to better serve the Robot Framework users, whether beginners or advanced, to find what they are looking for and solve their Robot Framework issues. `)
+
+const projectScope = marked(`The update and restructure Robot Framework User Guide project will:
+
+- audit the existing User Guide and evaluate to what extent we need new content and how to improve the current content
+- write new content and update existing content of the User Guide for the relevant parts identified  
+- evaluate and change the structure of the User Guide and move parts, like examples, under Docs  
+- bring the new User Guide under Docusaurus as a separate resource from Docs, but align the landing page and visual identity
+
+In the project team, we will have a project manager, community members, our webmaster and our main developer to support the technical writer.  
+
+We estimate it takes 6 months to complete the project. 
+
+
+#### Measuring your project's success
+
+Overall, the project is successful if we have a clearly structured updated User Guide in a visually appealing format with a clear distinction between the User Guide and Docs.  
+
+In order to know if people like the new User Guide, we should conduct a community survey or add questions about it in our bi-annual survey.  
+
+Moreover, one indication of a successful project could be the reduction of the bounce rate on the User Guide page, which is currently 36%. Some of this comes from factors outside of the project scope, but part of the bounce rate can be due to the structure, visuals and other attributes of the current User Guide, which does not invite people to stay on the page.  
+
+#### Timeline
+
+The project itself will take approximately six months to complete. Once the technical writer is hired, we'll spend a few weeks on the orientation, then move onto the audit phase, and then spend a few months on creating the new User Guide content and lastly getting that into Docusaurus.  
+
+| Tentative dates | Action Items |
+| --- | --- |
+| May | Orientation |
+| June - August | Audit existing documentation and create friction log |
+| September - October | Create User Guide |
+| November | Project completion |`)
+
+const projectBudget = marked(`
+| Budget item | Amount | Running Total | Notes/justifications |
+| --- | --- | --- | --- |
+| Technical writer audit, update, test, and publish new User Guide | 10500.00 | 10500.00 | Let's hope this is enough. |
+| Web development | 1500.00 | 12000.00 | Our webmaster's work to have help with Docusaurus |
+| Main developer | 1500.00 | 13500.00 | Our main developer to give introduction to the current Docs;  help with the new ones |
+| Project implementation in Docusaurus | 1500.00 | 15000.00 | Getting the new updated User Guide to Docusaurus |
+| TOTAL |  | 15000.00 | USD  |`)
+
+const additionInformation = marked(`The main developer, who will also be part of the work group, has written the current User Guide and can help with any questions and also can provide an introduction to the topic as well as other help with the current documentation and transition to the new format.  
+
+Moreover, one of the work group members is the main author of our Docs, and is also available to help to transform and implement the updated User Guide content to Docusaurus platform. Lastly, project management and administration is provided by the Executive Director of the Robot Framework Foundation.  `)
+
 
 export default {
   components: {
@@ -132,7 +120,7 @@ export default {
     return {
       pages: [
         {
-          title: "Introduction",
+          title: "About Us",
           text_block: true,
           tab_box: false,
           member_box: false,
@@ -140,14 +128,14 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Introduction",
+              header: "About Us",
               text: introText
 
             }
           }
         },
         {
-          title: "Installation",
+          title: "Project",
           text_block: true,
           tab_box: false,
           member_box: false,
@@ -155,12 +143,58 @@ export default {
           data: {
             text: {
               twitter: false,
-              header: "Installation",
-              text: installText
+              header: "Project Issues",
+              text: ourProjectIssue
 
             }
           }
         },
+        {
+          title: "Project Scope",
+          text_block: true,
+          tab_box: false,
+          member_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Project Scope",
+              text: projectScope
+
+            }
+          }
+        },
+        {
+          title: "Project Budget",
+          text_block: true,
+          tab_box: false,
+          member_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Project Budget",
+              text: projectBudget
+
+            }
+          }
+        },
+        {
+          title: "Additional Information",
+          text_block: true,
+          tab_box: false,
+          member_box: false,
+          feature_box: false,
+          data: {
+            text: {
+              twitter: false,
+              header: "Additional Information",
+              text: additionInformation
+
+            }
+          }
+        },
+        /*
         {
           title: "RoboCon-Talk",
           text_block: true,
@@ -262,7 +296,7 @@ export default {
           tab_box: false,
           url: 'https://playwright.dev/',
           feature_box: false
-        },
+        },*/
       ]
     };
   }

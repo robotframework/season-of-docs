@@ -384,13 +384,22 @@ hr {
   font-family: Courier;
 }
 
-th {
-  display: none;
-}
 
 table {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 3px;
   margin: 30px 0;
   font-size: 1rem;
+}
+
+td, th {
+  padding: 1px 4px
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #e7e7e7;
 }
 
 .textblock-right {

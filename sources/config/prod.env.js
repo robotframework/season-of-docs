@@ -19,5 +19,6 @@ This code was derived from https://github.com/robotframework/robotframework.gith
 */
 
 module.exports = {
-  NODE_ENV: '"production"'
+  NODE_ENV: '"production"',
+  baseUrl: '/season-of-docs/'
 }
