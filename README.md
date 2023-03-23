@@ -23,11 +23,23 @@ The content could be modernized. Some of the examples, although still correct, a
 #### Structure and writing style
 The structure is now a mix of technical guide (manual) and a quick start guide with examples. We have created a separate ["Docs" site](https://docs.robotframework.org/docs) for examples and more hands-on material and we would see fit to move the examples from the User Guide there, making the User Guide a more of a technical manual. Overall, we see that the User Guide structure should be revised and possibly re-organized and the document re-written at least partly.  
 
-#### Visuals
-The User Guide should be more visually appealing. The User Guide can be a bit off-putting for new users just learning about the tool and landing on the page. We could move it to the same platform as Docs ([Docusaurus](https://docusaurus.io/)) which would also help to make the visuals more appealing and the overall document more approachable.  
+#### Documentation platform
 
-#### Navigation and search
-The User Guide is currently a very long 1-page document with a side-navigation. It has no search function (beside Browser Text Search) and the fact that it's one page makes it hard to navigate/jump between chapters.
+The User Guide is currently hosted as a static HTML page under GitHub pages. Part of the overall
+User Guide modernization project is moving it to a dedicated documentation platform that natively
+supports search, gloassary, showing documentation for different Robot Framework versions, and so on.
+Alternatives include [Docusaurus](https://docusaurus.io), that we use with the aforementioned
+[Guides](https://docs.robotframework.org/docs), and [Read the Docs](https://readthedocs.org/),
+that is used with the [API documentation](https://robot-framework.readthedocs.io).
+
+Deciding the documentation platform needs to be done in collaboration with the Robot Framework
+core development team that will use the said platform in their daily work afterwards.
+A part of this is making sure that the latest documentation is automatically build after changes.
+Setting the platform and needed integrations can be considered a separate project and the technical
+writer does not need to be responsible on it.
+
+#### Visuals
+The User Guide should be more visually appealing. The User Guide can be a bit off-putting for new users just learning about the tool and landing on the page. Part of the project is making the visuals more appealing and the overall document more approachable.
 
 #### Conclusion
 
@@ -39,8 +51,8 @@ The update and restructure Robot Framework User Guide project will:
 
 - audit the existing User Guide and evaluate to what extent we need new content and how to improve the current content
 - write new content and update existing content of the User Guide for the relevant parts identified  
-- evaluate and change the structure of the User Guide and move parts, like examples, under Docs  
-- bring the new User Guide under Docusaurus as a separate resource from Docs, but align the landing page and visual identity
+- evaluate and change the structure of the User Guide 
+- bring the new User Guide onto the selected documentation platform
 
 In the project team, we will have a project manager, community members, our webmaster and our main developer to support the technical writer.  
 
