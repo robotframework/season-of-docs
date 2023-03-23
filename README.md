@@ -27,7 +27,7 @@ The structure is now a mix of technical guide (manual) and a quick start guide w
 
 The User Guide is currently hosted as a static HTML page under GitHub pages. Part of the overall
 User Guide modernization project is moving it to a dedicated documentation platform that natively
-supports search, gloassary, showing documentation for different Robot Framework versions, and so on.
+supports search, glossary, showing documentation for different Robot Framework versions, and so on.
 Alternatives include [Docusaurus](https://docusaurus.io), that we use with the aforementioned
 [Guides](https://docs.robotframework.org/docs), and [Read the Docs](https://readthedocs.org/),
 that is used with the [API documentation](https://robot-framework.readthedocs.io).
